@@ -1,0 +1,59 @@
+.contacts {
+  width: 297px;
+  border-right: 3px solid #E9EBED;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    height: 50px;
+    font-size: 12px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f2f6fa;
+    }
+
+    &-avatar {
+      margin: 0 10px;
+      width: 50px;
+      height: 50px;
+      flex-shrink: 0;
+      line-height: 50px;
+      border-radius: 50%;
+      background-color: #80D066;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      color: white;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 40%;
+      justify-content: flex-start;
+    }
+
+    &-name {
+      font-weight: bolder;
+      margin-bottom: 10px;
+    }
+
+    &-msg {
+      color: #777;
+    }
+
+    &-extra {
+      padding-right: 20px;
+      height: 100%;
+      margin-left: auto;
+    }
+
+    &-time {
+      margin-top: 10px;
+      color: #BFCCD8;
+    }
+  }
+}

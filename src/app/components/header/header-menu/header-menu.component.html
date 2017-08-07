@@ -1,0 +1,12 @@
+<div class="header-menu" (click)="toggleMenu()">
+
+  <div class="header-menu__button" [ngClass]="{'_active': menuOpened}">
+
+  </div>
+
+  <div class="header-menu__title">
+    Telegram
+  </div>
+</div>
+
+<app-header-content *ngIf="menuOpened"></app-header-content>

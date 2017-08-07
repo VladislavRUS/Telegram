@@ -1,0 +1,27 @@
+<div class="contacts">
+  <div class="contacts__list">
+    <div class="contacts__item" *ngFor="let contact of contacts">
+      <div class="contacts__item-avatar">
+        {{contact.name.substr(0, 2)}}
+      </div>
+
+      <div class="contacts__item-content">
+        <div class="contacts__item-name">
+          {{contact.name}}
+        </div>
+        <div class="contacts__item-msg">
+          {{contact.messages[contact.messages.length-1].text}}
+        </div>
+      </div>
+
+      <div class="contacts__item-extra">
+        <div class="contacts__item-time">
+          {{getLastVisit(contact)}}
+        </div>
+        <div class="contacts__item-cnt" *ngIf="unreadMessages(contact)">
+          {{unreadMessages(contact)}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

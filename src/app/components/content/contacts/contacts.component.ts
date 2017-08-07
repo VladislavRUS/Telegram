@@ -10,10 +10,13 @@ import {Message} from "../../../classes/message";
 export class ContactsComponent implements OnInit {
 
   private contacts: Array<Contact>;
+  private filteredContacts: Array<Contact>;
+  private searchContact = 'fdfdf';
   constructor(private contactService: ContactService) { }
 
   ngOnInit() {
     this.contacts = this.contactService.getContacts();
+    this.filteredContacts = Object.assign([], this.contacts);
   }
 
   unreadMessages(c: Contact): number {
@@ -37,5 +40,11 @@ export class ContactsComponent implements OnInit {
     }
 
     return c.lastVisit.getHours().toString() + ':' + minutesString;
+  }
+
+  onFilter(value: string): void {
+    this.filteredContacts = this.contacts.filter( c => {
+      return c.name.includes(value);
+    });
   }
 }

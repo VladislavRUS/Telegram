@@ -1,6 +1,6 @@
 <div class="header-menu" (click)="toggleMenu()">
 
-  <div class="header-menu__button" [ngClass]="{'_active': menuOpened}">
+  <div class="header-menu__button" [ngClass]="{'_active': menuOpened == 'active'}">
 
   </div>
 
@@ -9,4 +9,4 @@
   </div>
 </div>
 
-<app-header-content *ngIf="menuOpened"></app-header-content>
+<app-header-content [animationState]="menuOpened"></app-header-content>

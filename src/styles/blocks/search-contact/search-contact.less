@@ -1,0 +1,30 @@
+.search-contact {
+  position: relative;
+  padding: 15px;
+
+  &__icon {
+    color: #777;
+    position: absolute;
+    top: 26px;
+    left: 26px;
+  }
+
+  &__input {
+    padding: 0 5px 0 35px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    height: 40px;
+    border: none;
+    background-color: #F2F2F2;
+    transition: background-color .1s ease;
+
+    &:focus {
+      padding-left: 34px;
+      border: 1px solid #d8d8d8;
+      background-color: white;
+    }
+  }
+}

@@ -15,10 +15,12 @@ import {
     trigger('contentState', [
       state('inactive', style({
         transform: 'translateY(100%)',
+        visibility: 'hidden',
         opacity: '0'
       })),
       state('active', style({
         transform: 'translateY(0)',
+        visibility: 'visible',
         opacity: '1'
       })),
       transition('inactive => active', animate('200ms ease-in')),

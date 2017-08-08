@@ -1,0 +1,53 @@
+.chat-input {
+  flex-basis: 20%;
+
+  &__body {
+    display: flex;
+    padding: 0 50px;
+    justify-content: space-between;
+  }
+
+  &__avatar {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+
+  &__msg-input {
+    flex-basis: 75%;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 80px;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid #888;
+    outline: none;
+    transition: border .1s ease;
+
+    &:focus {
+      border-bottom: 3px solid #77B7E4;
+    }
+  }
+
+  &__send-btn {
+    padding: 5px;
+    float: right;
+    font-size: 13px;
+    font-weight: bolder;
+    letter-spacing: 0.01em;
+    color: #499dd9;
+    cursor: pointer;
+
+    &:hover {
+      color: #72a0c7;
+    }
+  }
+}

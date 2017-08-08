@@ -1,0 +1,18 @@
+<div class="chat-input__body">
+
+  <div class="chat-input__avatar"
+       [ngStyle]="{'background-color': 'red'}">
+    VL
+  </div>
+
+  <div class="chat-input__msg-input">
+    <textarea class="chat-input__textarea" placeholder="Write a message.."></textarea>
+
+    <div class="chat-input__send-btn">SEND</div>
+  </div>
+
+  <div class="chat-input__avatar"
+       [ngStyle]="{'background-color': currentContact().color}">
+    {{currentContact().name.substr(0, 2)}}
+  </div>
+</div>

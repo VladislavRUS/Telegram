@@ -1,4 +1,4 @@
 <div class="main-content">
   <app-contacts></app-contacts>
-  <app-chat></app-chat>
+  <app-chat *ngIf="contactService.getCurrentContact()"></app-chat>
 </div>

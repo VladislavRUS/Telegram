@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostBinding, OnInit} from '@angular/core';
 import {Contact} from "app/classes/contact";
 import {ContactService} from "../../../services/contact.service";
-import {Message} from "../../../classes/message";
 
 @Component({
   selector: 'app-contacts',
@@ -9,10 +8,14 @@ import {Message} from "../../../classes/message";
 })
 export class ContactsComponent implements OnInit {
 
+  @HostBinding('class') hostClass = 'contacts';
+
   private contacts: Array<Contact>;
   private filteredContacts: Array<Contact>;
   private searchContact = 'fdfdf';
-  constructor(private contactService: ContactService) { }
+
+  constructor(private contactService: ContactService) {
+  }
 
   ngOnInit() {
     this.contacts = this.contactService.getContacts();
@@ -43,8 +46,15 @@ export class ContactsComponent implements OnInit {
   }
 
   onFilter(value: string): void {
-    this.filteredContacts = this.contacts.filter( c => {
+    this.filteredContacts = this.contacts.filter(c => {
       return c.name.includes(value);
     });
+  }
+  isCurrentContact(contact: Contact) {
+    return contact == this.contactService.getCurrentContact();
+  }
+
+  setCurrentContact(contact: Contact): void {
+    this.contactService.setCurrentContact(contact);
   }
 }

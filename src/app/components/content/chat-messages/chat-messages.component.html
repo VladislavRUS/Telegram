@@ -1,0 +1,18 @@
+<div class="chat-messages" *ngIf="currentContact()">
+  <div class="chat-messages__list">
+    <div class="chat-messages__item"
+         (click)="selectMessage(msg)"
+         [ngClass]="{'_active': msg.selected}"
+         *ngFor="let msg of messages(); let i = index;">
+
+      <div class="chat-messages__item-selected"></div>
+      <div class="chat-messages__item-avatar"
+           [ngStyle]="{'background-color': currentContact().color}"
+           [ngClass]="{'_hidden': i !== 0 }">
+        {{currentContact().name.substr(0, 2)}}
+      </div>
+      <div class="chat-messages__item-text">{{msg.text}}</div>
+      <div class="chat-messages__item-time">{{getTime(msg)}}</div>
+    </div>
+  </div>
+</div>

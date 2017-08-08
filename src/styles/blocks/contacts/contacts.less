@@ -1,6 +1,6 @@
 .contacts {
   height: 100%;
-  width: 300px;
+  flex-basis: 30%;
   border-right: 2px solid #E9EBED;
 
   &__item {
@@ -9,9 +9,16 @@
     height: 70px;
     font-size: 12px;
     cursor: pointer;
-
     &:hover {
+
       background-color: #f2f6fa;
+    }
+
+    &._active {
+      background-color: #6490B1;
+      color: white;
+
+      &:hover {}
     }
 
     &-avatar {
@@ -21,7 +28,6 @@
       flex-shrink: 0;
       line-height: 50px;
       border-radius: 50%;
-      background-color: #80D066;
       font-size: 20px;
       font-weight: bold;
       text-transform: uppercase;
@@ -43,6 +49,10 @@
 
     &-msg {
       color: #777;
+    }
+
+    &._active &-msg {
+      color: white;
     }
 
     &-extra {

@@ -13,6 +13,8 @@ import { ContactsComponent } from './components/content/contacts/contacts.compon
 import {ContactService} from './services/contact.service';
 import { ChatComponent } from './components/content/chat/chat.component';
 import { SearchContactComponent } from './components/content/search-contact/search-contact.component';
+import { ChatMessagesComponent } from './components/content/chat-messages/chat-messages.component';
+import { ChatInputComponent } from './components/content/chat-input/chat-input.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { SearchContactComponent } from './components/content/search-contact/sear
     MainContentComponent,
     ContactsComponent,
     ChatComponent,
-    SearchContactComponent
+    SearchContactComponent,
+    ChatMessagesComponent,
+    ChatInputComponent
   ],
   imports: [
     BrowserModule,
